@@ -28,7 +28,7 @@ KFROT = 1e-6
 
 # >>> AJOUT : paramètres de traîne multi-images
 TRAIL_LENGTH = 12
-TRAIL_GAP = 3          # >>> AJOUT : on n'enregistre qu'une position sur TRAIL_GAP frames
+TRAIL_GAP = 3          # >>> AJOUT : on N'enregistre qu'une position sur TRAIL_GAP frames
 TRAIL_RADIUS_MIN = 0.00035
 TRAIL_RADIUS_MAX = 0.00110
 
@@ -304,7 +304,7 @@ def main():
         # agregate()
         integrate()
 
-        # >>> MODIF : on n'enregistre qu'une frame sur TRAIL_GAP
+        # >>> MODIF : on N'enregistre qu'une frame sur TRAIL_GAP
         if frame_counter % TRAIL_GAP == 0:
             store_history(history_head)
             history_head = (history_head + 1) % TRAIL_LENGTH

@@ -261,7 +261,7 @@ def hsv_to_rgb_cpu(h, s, v):
 
 
 def rgb_array_to_hex_colors(rgb_array):
-    # AJOUTÉ : conversion (n,3) float [0,1] -> (n,) uint32 0xRRGGBB
+    # AJOUTÉ : conversion (N,3) float [0,1] -> (N,) uint32 0xRRGGBB
     rgb255 = np.clip(rgb_array * 255.0, 0, 255).astype(np.uint32)
     return (rgb255[:, 0] << 16) | (rgb255[:, 1] << 8) | rgb255[:, 2]
 

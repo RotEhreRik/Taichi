@@ -298,7 +298,7 @@ def make_tone(freq, duration=AUDIO_DURATION, sample_rate=SAMPLE_RATE, volume=AUD
                 0.22 * np.sin(2.0 * np.pi * 2.0 * freq * t) +
                 0.10 * np.sin(2.0 * np.pi * 3.0 * freq * t)
         )
-        # env = adsr_envelope(n, sample_rate, 0.004, 0.06, 0.55, 0.10)
+        # env = adsr_envelope(N, sample_rate, 0.004, 0.06, 0.55, 0.10)
         env = adsr_envelope(n, sample_rate, 0.008, 0.07, 0.50, 0.12)  # MODIFIÉ
     wave = np.tanh(1.4 * wave)
     mono = (volume * wave * env).astype(np.float32)
